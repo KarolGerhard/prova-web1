@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Rubik:300i');
+
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+body {
+    width: auto;
+    max-width: 750px;
+    margin: 0 auto;
+
+    /*remover depois */
+    background-color: white;
+}
+
+#header {
+    background-color: #EB8F79;
+    border-bottom: none;
+    font-size: 40px;
+    color: red;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+    min-height: 50px;
+}
+
+#header > img {
+    display: inline-block;
+    float: left;
+    width: auto;
+    max-width: 20%;
+    height: auto;
+    max-height: 40px;
+    /*margin-left: 0;*/
+    margin: 5px;
+    clear: both;
+}
+
+#header > h1 {
+    display: inline-block;
+    text-align: center;
+    float: none;
+    font-size: larger;
+}
+
+#header > a {
+    background-color: white;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    float: right;
+    width: auto;
+    /*max-width: 20%;*/
+    height: auto;
+    /*max-height: 40px;*/
+    margin: 5px;
+    font-size: large;
+    line-height: 40px;
+    text-decoration: none;
+
+    /*clear: both;*/
+}
+
+.content {
+    background-color: #F0F0F0;
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.section {
+    margin-top: 5px;
+    display: inline-block;
+    width: 99%;
+    min-width: 60px;
+}
+
+main {
+    display: inline-block;
+    width: 70%;
+    background-color: black;
+    float: left;
+    min-height: 200px;
+    height: auto;
+    padding: 2px;
+
+}
+
+main > h2 {
+    text-align: left;
+    color: red;
+    font-weight: bold;
+}
+
+main > p {
+    text-align: justify;
+    color: red;
+    font-size: 12px;
+    margin: 10px;
+}
+
+aside {
+    display: inline-block;
+    width: 28%;
+    background-color: black;
+    float: right;
+}
+
+figure, img, figcaption {
+    width: 100%;
+    color: white;
+    font-size: 10pt;
+}
+
+.figura {
+    opacity: .50;
+}
+
+/*-----------------------------------------
+--- SEGUNDA SESSÃO
+-------------------------------------------*/
+
+.sectioninferior {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    background-color: #C0C0C0;
+}
+
+.bloco {
+    display: inline-block;
+    margin: 5px;
+    width: 47%;
+}
+
+.bloco > figure {
+    width: 100%;
+    height: 100%;
+}
+
+.bloco > figure > figcaption {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3em;
+    width: 100%;
+    visibility: collapse;
+
+    background-color: black;
+    opacity: .5;
+    /*margin-top: -200px;*/
+    vertical-align: middle;
+    text-align: center;
+    /*line-height: 170px;*/
+}
+
+.bloco > figure:hover > figcaption {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.bloco > img {
+    margin: 0;
+    width: 100%;
+    /*height: auto;*/
+    height: 100px;
+    display: inline-block;
+}
+
+.bloco > table {
+    font-family: 'Nunito', sans-serif;
+    /*margin-top: -150px;*/
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+}
+
+.bloco th {
+    color: #030006;
+    font-size: 1.5em;
+}
+
+.bloco > thead, th, td {
+
+    text-align: left;
+    color: #030006;
+    border-bottom: 2px solid #808080;
+    width: 100%;
+}
+
+.bloco > thead, tr {
+    width: 100%;
+    padding: 3px;
+    line-height: 2em;
+}
+
+td.first {
+    width: 20px;
+}
+
+.imglateral {
+    width: 240px;
+    height: 100px;
+    margin-top: px;
+    margin-right: 10px;
+    float: right;
+    opacity: .50;
+    border: solid indianred;
+}
+
+.bloco2 {
+    display: inline-block;
+    width: 20%;
+    margin: 15px;
+}
+
+.bloco2 > h3 {
+    text-align: left;
+    color: white;
+}

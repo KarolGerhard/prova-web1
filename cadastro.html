@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova web</title>
+    <link rel="stylesheet" href="css/_style.css">
+    <link rel="stylesheet" href="css/_menu.css">
+
+    <script>
+        function verificacao() {
+            var password = document.getElementById("senha").value;
+            if (password.length > 8) {
+                alert('Senha com mais de 8 caracteres!');
+            }
+            if (password.length == 0) {
+                alert('Campo Vazio!');
+            }
+            if ((password.length <= 8) && (password.length != 0)) {
+                alert('Menos de 8 caracteres!');
+            }
+
+            if (document.cad.curso.value == "") {
+                document.getElementById("campocurso").style.background = "red";
+                document.getElementById("campocurso").style.border = "2px solid red";
+                document.getElementById("campocurso").focus();
+            } else {
+                document.getElementById("campocurso").style.background = "green";
+                document.getElementById("campocurso").style.border = "2px solid green";
+
+                if (document.cad.cidade.value == "null") {
+                    document.getElementById("campocidade").style.background = "red";
+                    document.getElementById("campocidade").style.border = "2px solid red";
+                    document.getElementById("campocidade").focus();
+                } else {
+                    document.getElementById("campocidade").style.background = "green";
+                    document.getElementById("campocidade").style.border = "2px solid green";
+
+                    if (document.cad.estado.value == "null") {
+                        document.getElementById("campoestado").style.background = "red";
+                        document.getElementById("campoestado").style.border = "2px solid red";
+                        document.getElementById("campoestado").focus();
+                    } else {
+                        document.getElementById("campoestado").style.background = "green";
+                        document.getElementById("campoestado").style.border = "2px solid green";
+
+                        if (document.cad.endereco.value == "") {
+                            document.getElementById("campoendereco").style.background = "red";
+                            document.getElementById("campoendereco").style.border = "2px solid red";
+                            document.getElementById("campoendereco").focus();
+                        } else {
+                            document.getElementById("campoendereco").style.background = "green";
+                            document.getElementById("campoendereco").style.border = "2px solid green";
+
+                            document.getElementById("enviar").removeAttribute('disabled');
+
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        function esconder() {
+            document.getElementById("esconder").style.display = 'none';
+            document.getElementById("aparecer").style.display = 'block';
+        }
+        }
+
+    </script>
+
+</head>
+<body>
+<header id="header">
+    <img src="img/logo.png">
+    <h1> ADOTE SOS </h1>
+    <a href="cadastro.html"> Entrar </a>
+</header>
+
+<div class="content">
+    <nav class="margin">
+        <ul>
+            <li class="item"><a href="index.html">Home</a></li>
+            <li class="item"><a href="cadastro.html">Cadastro</a></li>
+            <li class="item">Sobre</li>
+            <li class="item">Dicas</li>
+            <li class="item">Item 5</li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        <main>
+            <h2>Título</h2>
+            <p>Lorem ipsum dolor sit amet, <em> consectetur
+                adipisicing elit</em>. Architecto aut beatae cupiditate dolor, ea enim error
+                esse exercitationem
+                <mark> fugiat fugit id</mark>
+                incidunt laboriosam neque nostrum obcaecati omnis quod suscipit vel.
+            </p>
+            <p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit. A blanditiis dolorem doloremque
+                doloribus est
+                itaque </strong> laudantium odit, officia officiis perspiciatis quo repudiandae sequi velit. At hic
+                itaque quisquam
+                quos soluta!
+            </p>
+        </main>
+        <aside>
+            <figure class="figura">
+                <img src="img/cao1.jpg" alt="cachorro">
+                <figcaption>Fonte: google</figcaption>
+            </figure>
+        </aside>
+    </section>
+
+    <section>
+        <form name="cad" action="" method="get">
+            <fieldset>
+                <label>Nome:</label><br/>
+                <input type="text" id="camponome" class="campo" name="nome" onmouseout="verificar()"/><br/>
+                <label>RGA:</label><br/>
+                <input type="text" id="camporga" class="campo" name="rga" onmouseout="verificar()"/><br/>
+                <label>Curso:</label><br/>
+                <input type="text" id="campocurso" class="campo" name="curso" onmouseout="verificar()"/><br/>
+                <label>Sexo:</label><br/>
+                <input type="radio" name="Sexo" value="feminino" class="cheeck"/>Feminino
+                <input type="radio" name="Sexo" value="masculino" class="cheeck"/>Masculino
+                <input type="radio" name="Sexo" value="outro" class="cheeck" checked/>Outro<br/>
+                <label>Cidade:</label><br/>
+                <select name="cidade" class="campo" id="campocidade" onmouseout="verificar()">
+                    <option value="null"> ---</option>
+                    <option value="ROO">Rondonópolis</option>
+                    <option value="MAN">Manaus</option>
+                    <option value="POA">Porto Alegre</option>
+                    <option value="RIO">Rio de Janeiro</option>
+                    <option value="Rec">Recife</option>
+                </select><br/>
+                <label>Estado:</label><br/>
+                <select name="estado" class="campo" id="campoestado" onmouseout="verificar()">
+                    <option value="null">---</option>
+                    <optgroup label=" REGIAO SUL">
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                    <optgroup label=" REGIAO SUlDESTE">
+                        <option value="RJ">Rio de Janeiro</option>
+                    </optgroup>
+                    <optgroup label=" REGIAO CENTRO-OESTE">
+                        <option value="MT">Mato Grosso</option>
+                    </optgroup>
+                    <optgroup label=" REGIAO NORTE">
+                        <option value="AM">Amazonas</option>
+                    </optgroup>
+                    <optgroup label=" REGIAO NORDESTE">
+                        <option value="PE">Pernambuco</option>
+                    </optgroup>
+                </select><br/>
+                <label>Endereço:</label><br/>
+                <textarea rows="1" id="campoendereco" name="endereco" onmouseout="verificar()"></textarea><br/>
+                <label>Senha:</label><br>
+                <input type="password" id="senha" class="el"><br>
+                <input type="button" id="enviar" class="btnenviar" value="enviar" disabled onclick="esconder()"/>
+            </fieldset>
+        </form>
+    </section>
+</div>
+</body>
+</html>

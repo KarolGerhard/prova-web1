@@ -1,0 +1,19 @@
+form fieldset{
+    border:2px solid pink;
+    color:white;
+    background-repeat: repeat-x;
+}
+form .campo, textarea{
+    width:374px;
+    border:2px solid violet;
+    background:pink;
+}
+form .btnenviar{
+    border:2px solid pink;
+    background:violet;
+    width:100px;
+    height:100px;
+    position:fixed;
+    top:150px;
+    left:600px;
+}
